@@ -17,14 +17,11 @@
         return -1;
     }
 
-    let arrNum = +prompt("Nhap so luong phan tu cua mang: ");
 
-    let array = new Array(arrNum);
-    for (let i = 0; i < array.length; i++) {
-        array[i] = +prompt("Nhap phan tu thu " + (i + 1) + " : ");
-    }
+    let array = [0,1,2,3,4,5,6,7,8,9];
 
     let numberCheck = +prompt("Nhap vao gia tri can tim: ");
+
     if (findIndex(array, numberCheck) !== -1) {
         alert("Gia tri nhap vao co trong mang")
     } else {
