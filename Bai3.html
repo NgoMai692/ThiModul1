@@ -10,25 +10,31 @@
     let string = prompt("Nhap chuoi can kiem tra");
 
     if(findString(string)){
-        alert("Chuoi nhap vao co ki tu nguyen am")
+        alert("Chuoi nhap vao co"+findString(string) + " ki tu nguyen am")
     }else {
         alert("Chuoi nhap vao khong co ki tu nguyen am")
     }
 
     function findString(str){
+        let count = 0;
         let alpha = "a,o,e,u,i";
         let alpha1 = "A,O,E,U,I";
         for (let i = 0; i < str.length; i++) {
             for (let j = 0; j < alpha.length; j++) {
                 if (alpha[j]===str[i]){
-                    return true;
+                    count++;
                 }
                 if (alpha1[j]===str[i]){
-                    return true;
+                    count++;
                 }
             }
         }
-        return false;
+        if(count === 0){
+            return false;
+        }else {
+            return count;
+        }
+
     }
 
 </script>
