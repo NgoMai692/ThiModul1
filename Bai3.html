@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+
+    let string = prompt("Nhap chuoi can kiem tra");
+
+    if(findString(string)){
+        alert("Chuoi nhap vao co ki tu nguyen am")
+    }else {
+        alert("Chuoi nhap vao khong co ki tu nguyen am")
+    }
+
+    function findString(str){
+        let alpha = "abcdefghijklmnopqrstuvwxyz";
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < 26; j++) {
+                if (alpha[j]===str[i]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+</script>
+</body>
+</html>
