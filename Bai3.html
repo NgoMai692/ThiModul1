@@ -16,10 +16,14 @@
     }
 
     function findString(str){
-        let alpha = "abcdefghijklmnopqrstuvwxyz";
+        let alpha = "a,o,e,u,i";
+        let alpha1 = "A,O,E,U,I";
         for (let i = 0; i < str.length; i++) {
-            for (let j = 0; j < 26; j++) {
+            for (let j = 0; j < alpha.length; j++) {
                 if (alpha[j]===str[i]){
+                    return true;
+                }
+                if (alpha1[j]===str[i]){
                     return true;
                 }
             }
